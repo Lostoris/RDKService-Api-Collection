@@ -1,0 +1,2313 @@
+{
+	"info": {
+		"_postman_id": "924a197c-2e52-46dc-9cbf-e200ae973d7a",
+		"name": "RDK-RpcCmd BCN_local",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14862658"
+	},
+	"item": [
+		{
+			"name": "IPTV",
+			"item": [
+				{
+					"name": "init",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 1234567890,\r\n    \"method\": \"IPTV.1.SetCCISUrl\",\r\n    \"params\": {\r\n        \"CCISurl\": \"https://172.27.44.74/ccis/v3-0/RequestHandler/RequestHandler.asmx\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Activate",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 1,\r\n    \"method\": \"Controller.1.activate\",\r\n    \"params\": {\r\n        \"callsign\": \" IPTV\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "tune",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 1234567890,\r\n    \"method\": \"IPTV.1.tune\",\r\n    \"params\": {\r\n        \"uri\": \"/home/root/CCITT033.ts\"\r\n    }\r\n}\r\n//\"uri\": \"/data/DVT_SPTS_Fingerprint.ts\"\r\n//\"uri\": \"/home/root/DVT_SPTS_SingleProduct.ts\"\r\n\r\n\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "play",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 1234567890,\r\n    \"method\": \"IPTV.1.play\",\r\n    \"params\": {\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "stop",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 1234567890,\r\n    \"method\": \"IPTV.1.stop\",\r\n    \"params\": {\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetInfo",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 1234567890,\r\n    \"method\": \"IPTV.1.GetIrdetoInfo\",\r\n    \"params\": {     \r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetInfo Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 1234567890,\r\n    \"method\": \"IPTV.1.GetProductList\",\r\n    \"params\": {}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CEC",
+			"item": []
+		},
+		{
+			"name": "LED",
+			"item": []
+		},
+		{
+			"name": "Power",
+			"item": [
+				{
+					"name": "GetPowerState",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": \"3\",\r\n    \"method\": \"org.rdk.System.1.getPowerState\"\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SetPowerState",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": \"3\",\r\n    \"method\": \"org.rdk.System.1.setPowerState\",\r\n    \"params\": {\r\n        \"powerState\": \"ON\",\r\n        \"standbyReason\": \"APIUnitTest\"\r\n    }\r\n}\r\n\r\n// \"powerState\": \"ON\",\r\n//\"powerState\": \"LIGHT_SLEEP\",\r\n// \"powerState\": \"DEEP_SLEEP\",\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SetPowerState_LIGHT_SLEEP",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": \"3\",\r\n    \"method\": \"org.rdk.System.1.setPowerState\",\r\n    \"params\": {\r\n        \"powerState\": \"LIGHT_SLEEP\",\r\n        \"standbyReason\": \"APIUnitTest\"\r\n    }\r\n}\r\n\r\n// \"powerState\": \"ON\",\r\n//\"powerState\": \"LIGHT_SLEEP\",\r\n// \"powerState\": \"DEEP_SLEEP\",\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SetPowerState_STR",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": \"3\",\r\n    \"method\": \"org.rdk.System.1.setPowerState\",\r\n    \"params\": {\r\n        \"powerState\": \"LIGHT_SLEEP\",\r\n        \"standbyReason\": \"APIUnitTest\"\r\n    }\r\n}\r\n\r\n// \"powerState\": \"ON\",\r\n//\"powerState\": \"LIGHT_SLEEP\",\r\n// \"powerState\": \"DEEP_SLEEP\",\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RDKShell",
+			"item": [
+				{
+					"name": "Disable Residentapp",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 42,\r\n    \"method\": \"org.rdk.RDKShell.1.setVisibility\",\r\n    \"params\": {\r\n        \"client\": \"residentapp\",\r\n        \"visible\": false\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get State",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 42,\r\n    \"method\": \"org.rdk.RDKShell.1.getState\",\r\n    \"params\": {\r\n        \"client\": \"residentapp\",\r\n        \"visible\": false\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Dis/Enable Key input event",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 42,\r\n    \"method\": \"org.rdk.RDKShell.1.ignoreKeyInputs\",\r\n    \"params\": {\r\n        \"ignore\":true}\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send key",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 42,\r\n    \"method\": \"org.rdk.RDKShell.generateKey\",\r\n    \"params\": {\r\n        \"keys\": [\r\n            {\r\n                \"keyCode\": 10,\r\n                \"modifiers\": [\r\n                    \"shift\"\r\n                ],\r\n                \"delay\": 1.0\r\n            }\r\n        ]\r\n    }\r\n}\r\n                // \"callsign\": \"Cobalt\",\r\n                // \"client\": \"Cobalt\"",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Visibility",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 42,\r\n    \"method\": \"org.rdk.RDKShell.1.getVisibility\",\r\n    \"params\": {\r\n        \"client\": \"ResidentApp\"\r\n    }\r\n}\r\n//\"callsign\": \"org.rdk.Netflix\"\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Launch",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 42,\r\n    \"method\": \"org.rdk.RDKShell.1.launch\",\r\n    \"params\": {\r\n        \"callsign\": \"Cobalt\",\r\n        \"type\": \"HtmlApp\",\r\n        \"version\": \"1.0\",\r\n        \"uri\": \"https://youtube.com\",\r\n        \"x\": 0,\r\n        \"y\": 0,\r\n        \"w\": 1920,\r\n        \"h\": 1080,\r\n        \"suspend\": false,\r\n        \"visible\": true,\r\n        \"focused\": true,\r\n        \"configuration\": \"...\",\r\n        \"behind\": \"...\",\r\n        \"displayName\": \"test\",\r\n        \"scaleToFit\": false,\r\n        \"holePunch\": false,\r\n        \"topmost\": false,\r\n        \"focus\": false,\r\n        \"autodestroy\": false\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Launch Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 42,\r\n    \"method\": \"org.rdk.RDKShell.1.launch\",\r\n    \"params\": {\r\n        \"callsign\": \"Cobalt\",\r\n        \"type\": \"HtmlApp\",\r\n        \"version\": \"1.0\",\r\n        \"uri\": \"https://youtube.com\",\r\n        \"x\": 0,\r\n        \"y\": 0,\r\n        \"w\": 1920,\r\n        \"h\": 1080,\r\n        \"suspend\": false,\r\n        \"visible\": true,\r\n        \"focused\": true,\r\n        \"configuration\": \"...\",\r\n        \"behind\": \"...\",\r\n        \"displayName\": \"test\",\r\n        \"scaleToFit\": false,\r\n        \"holePunch\": false,\r\n        \"topmost\": false,\r\n        \"focus\": false,\r\n        \"autodestroy\": false\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Bluetooth",
+			"item": [
+				{
+					"name": "connect",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 42,\r\n    \"method\": \"org.rdk.Bluetooth.1.connect\",\r\n    \"params\": {\r\n        \"deviceID\": \"92374086292598\",\r\n        \"deviceType\": \"HUMAN INTERFACE DEVICE\",\r\n        \"connectedProfile\": \"HUMAN INTERFACE DEVICE\"\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "disconnect",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 42,\r\n    \"method\": \"org.rdk.Warehouse.1.resetDevice\",\r\n    \"params\": {\r\n        \"suppressReboot\": false,\r\n        \"resetType\": \"WAREHOUSE\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "enable",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 42,\r\n    \"method\": \"org.rdk.Bluetooth.1.enable\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "disable",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 42,\r\n    \"method\": \"org.rdk.Bluetooth.1.disable\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Discovered Devices  List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 42,\r\n    \"method\": \"org.rdk.Warehouse.1.resetDevice\",\r\n    \"params\": {\r\n        \"suppressReboot\": false,\r\n        \"resetType\": \"WAREHOUSE\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Paired Devices List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 42,\r\n    \"method\": \"org.rdk.Bluetooth.1.getPairedDevices\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Connected Devices List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 42,\r\n    \"method\": \"org.rdk.Bluetooth.1.getConnectedDevices\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Device Info",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 42,\r\n    \"method\": \"org.rdk.Bluetooth.1.getDeviceInfo\",\r\n    \"params\": {\r\n        \"deviceID\": \"92374086292598\"\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Audio Info",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 42,\r\n    \"method\": \"org.rdk.Bluetooth.1.getAudioInfo\",\r\n    \"params\": {\r\n        \"deviceID\": \"61579454946360\"\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Name",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 42,\r\n    \"method\": \"org.rdk.Bluetooth.1.getName\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Set Name",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 42,\r\n    \"method\": \"org.rdk.Bluetooth.1.setName\",\r\n    \"params\": {\r\n        \"name\": \"RDK Bluetooth Device\"\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Is Discoverable",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 42,\r\n    \"method\": \"org.rdk.Bluetooth.1.isDiscoverable\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Set Discoverable",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 42,\r\n    \"method\": \"org.rdk.Bluetooth.1.setDiscoverable\",\r\n    \"params\": {\r\n        \"timeout\": 5,\r\n        \"discoverable\": true\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pair",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 42,\r\n    \"method\": \"org.rdk.Bluetooth.1.pair\",\r\n    \"params\": {\r\n        \"deviceID\": \"61579454946360\"\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Unpair",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 42,\r\n    \"method\": \"org.rdk.Bluetooth.1.unpair\",\r\n    \"params\": {\r\n        \"deviceID\": \"61579454946360\"\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "respondToEvent",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 42,\r\n    \"method\": \"org.rdk.Bluetooth.1.respondToEvent\",\r\n    \"params\": {\r\n        \"deviceID\": \"61579454946360\",\r\n        \"eventType\": \"onPairingRequest\",\r\n        \"responseValue\": \"ACCEPTED\"\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sendAudioPlaybackCommand",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 42,\r\n    \"method\": \"org.rdk.Bluetooth.1.sendAudioPlaybackCommand\",\r\n    \"params\": {\r\n        \"deviceID\": \"61579454946360\",\r\n        \"command\": \"PLAY\"\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "setAudioStream",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 42,\r\n    \"method\": \"org.rdk.Bluetooth.1.setAudioStream\",\r\n    \"params\": {\r\n        \"deviceID\": \"61579454946360\",\r\n        \"audioStreamName\": \"PRIMARY\"\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Start Scan",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 42,\r\n    \"method\": \"org.rdk.Bluetooth.1.startScan\",\r\n    \"params\": {\r\n        \"timeout\": 5\r\n    }\r\n}\r\n//\"profile\": \"SMARTPHONE, HEADSET\"\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Stop Scan",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 42,\r\n    \"method\": \"org.rdk.Bluetooth.1.stopScan\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getDeviceVolumeMuteInfo",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 42,\r\n    \"method\": \"org.rdk.Bluetooth.1.getDeviceVolumeMuteInfo\",\r\n    \"params\": {\r\n        \"deviceID\": \"61579454946360\",\r\n        \"deviceProfile\": \"SMARTPHONE\"\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "setDeviceVolumeMuteInfo",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 42,\r\n    \"method\": \"org.rdk.Bluetooth.1.setDeviceVolumeMuteInfo\",\r\n    \"params\": {\r\n        \"deviceID\": \"61579454946360\",\r\n        \"deviceProfile\": \"SMARTPHONE\",\r\n        \"volume\": \"50\",\r\n        \"mute\": false\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getApiVersionNumber",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 42,\r\n    \"method\": \"org.rdk.Bluetooth.1.getApiVersionNumber\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Wifi",
+			"item": [
+				{
+					"name": "Start Scan",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 42,\r\n    \"method\": \"org.rdk.Wifi.1.startScan\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Start Scan Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 42,\r\n    \"method\": \"org.rdk.Wifi.1.cancelWPSPairing\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save SSID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 42,\r\n    \"method\": \"org.rdk.Wifi.saveSSID\",\r\n    \"params\": {\r\n        \"ssid\": \"ALostoris\",\r\n        \"passphrase\": \"11111111\",\r\n        \"securityMode\": 11\r\n    }\r\n}\r\n// \"ssid\": \"ALostoris\",\r\n// \"passphrase\": \"11111111\",\r\n//    \"ssid\": \"asdfg_Wi-Fi5\",\r\n//    \"passphrase\": \"12345678\",\r\n// \"securityMode\": 6\r\n\r\n\r\n\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Connect SSID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 42,\r\n    \"method\": \"org.rdk.Wifi.connect\",\r\n    \"params\": {\r\n        \"ssid\": \"asdfg_Wi-Fi5\",\r\n        \"passphrase\": \"12345678\",\r\n        \"securityMode\": 11\r\n    }\r\n}\r\n// \"passphrase\": \"12345678\",\r\n// \"ssid\": \"ALostoris\",\r\n// \"passphrase\": \"11111111\",\r\n// \"securityMode\": 6",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Connect SSID Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 42,\r\n    \"method\": \"org.rdk.Wifi.connect\",\r\n    \"params\": {\r\n        \"ssid\": \"ALostoris\",\r\n        \"passphrase\": null,\r\n        \"securityMode\": 11\r\n    }\r\n}\r\n// \"passphrase\": \"12345678\",\r\n// \"ssid\": \"ALostoris\",\r\n// \"passphrase\": \"11111111\",\r\n// \"securityMode\": 6",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Start Scan Copy 2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"jsonrpc\": \"2.0\",\r\n  \"id\": 342,\r\n  \"method\": \"org.rdk.Wifi.1.connect\",\r\n  \"params\": {\r\n    \"ssid\": \"asdfg-5G\",\r\n    \"passphrase\": \"12345678\",\r\n    \"securityMode\": 11\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Start Scan Copy 2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 42,\r\n    \"method\": \"org.rdk.Wifi.1.startScan\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Start Scan Copy 3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 42,\r\n    \"method\": \"org.rdk.Wifi.1.startScan\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Start Scan Copy 3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 42,\r\n    \"method\": \"org.rdk.Wifi.1.startScan\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Start Scan Copy 3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 42,\r\n    \"method\": \"org.rdk.Wifi.1.startScan\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Resolution",
+			"item": []
+		},
+		{
+			"name": "DisplaySetting",
+			"item": [
+				{
+					"name": "GetInfo",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 42,\r\n    \"method\": \"org.rdk.DisplaySettings.1.setVolumeLevel\",\r\n    \"params\": {\r\n        \"audioPort\": \"HDMI0\",\r\n        \"volumeLevel\": 0\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Support",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 42,\r\n    \"method\": \"org.rdk.DisplaySettings.1.setVolumeLevel\",\r\n    \"params\": {\r\n        \"audioPort\": \"HDMI0\",\r\n        \"volumeLevel\": 0\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Current Output",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 42,\r\n    \"method\": \"org.rdk.DisplaySettings.1.getCurrentOutputSettings\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Current Output Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 42,\r\n    \"method\": \"org.rdk.DisplaySettings.1.getCurrentOutputSettings\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Current Resolution",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 42,\r\n    \"method\": \"org.rdk.DisplaySettings.1.getCurrentOutputSettings\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Set Current Resolution",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 42,\r\n    \"method\": \"org.rdk.DisplaySettings.1.setCurrentResolution\",\r\n    \"params\": {\r\n        \"videoDisplay\": \"HDMI0\",\r\n        \"resolution\": \"1080p\",\r\n        \"persist\": true,\r\n        \"ignoreEdid\": true\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Set Volume",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 42,\r\n    \"method\": \"org.rdk.DisplaySettings.1.setVolumeLevel\",\r\n    \"params\": {\r\n        \"audioPort\": \"HDMI0\",\r\n        \"volumeLevel\": 0\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Activate",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 1,\r\n    \"method\": \"Controller.1.activate\",\r\n    \"params\": {\r\n        \"callsign\": \"org.rdk.DisplaySettings\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "System",
+			"item": [
+				{
+					"name": "GetSN",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 42,\r\n    \"method\": \"org.rdk.System.1.getSerialNumber\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Warehouse",
+			"item": [
+				{
+					"name": "Factory Rest",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 42,\r\n    \"method\": \"org.rdk.Warehouse.1.resetDevice\",\r\n    \"params\": {\r\n        \"suppressReboot\": false,\r\n        \"resetType\": \"WAREHOUSE\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Date-Check",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 42,\r\n    \"method\": \"org.rdk.Warehouse.1.isClean\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Network",
+			"item": [
+				{
+					"name": "Network-Check",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 42,\r\n    \"method\": \"org.rdk.Network.1.isConnectedToInternet\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Set IP Setting",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 42,\r\n    \"method\": \"org.rdk.Network.1.setIPSettings\",\r\n    \"params\": {\r\n        \"interface\": \"WIFI\",\r\n        \"ipversion\": \"IPv4\",\r\n        \"autoconfig\": \"flase\",\r\n        \"ipaddr\": \"192.168.1.106\",\r\n        \"netmask\": \"255.255.255.0\",\r\n        \"gateway\": \"192.168.1.1\",\r\n        \"primarydns\": \"192.168.1.1\",\r\n        \"secondarydns\": \"192.168.1.2\"\r\n    }\r\n}\r\n//\"interface\": \"WIFI\",\r\n//\"interface\": \"ETHERNET\",",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get IP Setting",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 42,\r\n    \"method\": \"org.rdk.Network.1.getIPSettings\",\r\n    \"params\": {\r\n        \"interface\": \"WIFI\",\r\n        \"ipversion\": \"IPv4\"\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get IP Setting Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 42,\r\n    \"method\": \"org.rdk.Network.1.setDefaultInterface\",\r\n    \"params\": {\r\n        \"interface\": \"WIFI\",\r\n        \"persist\": true\r\n    }\r\n}\r\n//\"interface\": \"WIFI\",\r\n//\"interface\": \"ETHERNET\",",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Controller",
+			"item": [
+				{
+					"name": "ResidentApp Status",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 42,\r\n    \"method\": \"Controller.1.status@ResidentApp\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "New Folder",
+			"item": []
+		},
+		{
+			"name": "Netflix",
+			"item": [
+				{
+					"name": "Activate",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 1,\r\n    \"method\": \"Controller.1.activate\",\r\n    \"params\": {\r\n        \"callsign\": \"Amazon\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Status",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 1234567890,\r\n    \"method\": \"Amazon.1.state\"\r\n}​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Personal Access Info",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 1234567890,\r\n    \"method\": \"Amazon.1.PersonalAccessInfo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Personal Access Info Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": \"1234567890\",\r\n    \"method\": \"Amazon.1.launchReason\",\r\n    \"params\": {\r\n        \"reason\": \"AV_LAUNCH_REASON_HOT_KEY\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:9998/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "9998",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "IP",
+			"value": "127.0.0.1"
+		},
+		{
+			"key": "IP_local",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
